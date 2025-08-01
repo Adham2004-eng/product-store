@@ -10,20 +10,22 @@ import Electronics from "./body/Products/Electronics";
 import ProductDetails from "./body/ProductsDetails/Component/ProductDetails";
 import CartUI from "./header/Cart/Components/CartUi";
 import Footer from "./Footer";
+
 const App = () => {
   return (
     <>
       <DijavoAppBar />
       <Routes>
         <Route path="/" element={<ProductList />} />
-        <Route path="/MensClothes" element={<MensClothes />} />
-        <Route path="/WomensClothes" element={<WomensClothes />} />
-        <Route path="/Electronics" element={<Electronics />} />
-        <Route path="/Jewelery" element={<Jewelery />} />
+        <Route path="/mensclothes" element={<MensClothes />} />
+        <Route path="/womensclothes" element={<WomensClothes />} />
+        <Route path="/electronics" element={<Electronics />} />
+        <Route path="/jewelery" element={<Jewelery />} />
         <Route path="/cart" element={<CartUI />} />
-        <Route path="/Login" element={<LoginForm />} />
-        <Route path="/Signup" element={<SignupForm />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/signup" element={<SignupForm />} />
         <Route path="/product/:id" element={<ProductDetails />} />
+
         <Route path="*" element={<ProductList />} />
       </Routes>
       <Footer />

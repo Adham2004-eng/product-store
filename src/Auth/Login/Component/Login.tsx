@@ -2,7 +2,7 @@ import { Box, Button, TextField, Typography, Link } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { handleLogin } from "../Action/GetLogin";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link as RouterLink } from "react-router-dom";
 
 type FormData = {
   email: string;
@@ -31,7 +31,6 @@ const LoginForm = () => {
       navigate("/");
     } else {
       setError("Invalid email or password");
-
     }
   };
 
@@ -80,7 +79,8 @@ const LoginForm = () => {
       <Typography variant="body2" sx={{ mt: 2, textAlign: "center" }}>
         Don't have an account?{" "}
         <Link
-          href="/signup"
+          component={RouterLink} 
+          to="/signup"
           underline="hover"
           sx={{ fontWeight: "bold", cursor: "pointer" }}
         >
